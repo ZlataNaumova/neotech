@@ -46,10 +46,8 @@ public class BaseTest {
     @Before
     public void prepareBrowser() {
         WebDriverRunner.clearBrowserCache();
-        //TODO inspect string bellow
         Selenide.open(Configuration.baseUrl);
         webDriver = getWebDriver();
-        //new GoogleHomePage(webDriver).load();
         webDriver.manage().window().setPosition(new Point(1, 1));
         logger.info("Browser size is {}", webDriver.manage().window().getSize().toString());
     }
